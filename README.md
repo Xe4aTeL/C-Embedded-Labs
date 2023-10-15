@@ -1,2 +1,2 @@
 # C-EmbeddedLabs
-Study repo for works in C/Embedded
+This repository was created for completed tasks of C/Embedded subject
