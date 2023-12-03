@@ -99,13 +99,6 @@ int main(void)
   HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_3); // red
   HAL_TIM_PWM_Start(&htim4, TIM_CHANNEL_4); // blue
 
-  /*
-  TIM4->CCR1=(int) IN_COUNTER * (1 - GREEN_DUTY / 100.0);
-  TIM4->CCR2=(int) IN_COUNTER * (1 - ORANGE_DUTY / 100.0);
-  TIM4->CCR3=(int) IN_COUNTER * (1 - RED_DUTY / 100.0);
-  TIM4->CCR4=(int) IN_COUNTER * (1 - BLUE_DUTY / 100.0);
-  */
-
   TIM4->CCR1=(int) IN_COUNTER / (100.0 / GREEN_DUTY);
   TIM4->CCR2=(int) IN_COUNTER / (100.0 / ORANGE_DUTY);
   TIM4->CCR3=(int) IN_COUNTER / (100.0 / RED_DUTY);

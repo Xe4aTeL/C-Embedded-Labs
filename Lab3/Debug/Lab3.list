@@ -41,9 +41,9 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  18 .debug_macro  0001fae4  00000000  00000000  0002a659  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .debug_line   0000a115  00000000  00000000  0004a13d  2**0
+ 19 .debug_line   0000a113  00000000  00000000  0004a13d  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 20 .debug_str    000c473d  00000000  00000000  00054252  2**0
+ 20 .debug_str    000c473d  00000000  00000000  00054250  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
  21 .debug_frame  000026b0  00000000  00000000  00118990  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
@@ -403,10 +403,6 @@ int main(void)
  80004f0:	210c      	movs	r1, #12
  80004f2:	4809      	ldr	r0, [pc, #36]	; (8000518 <main+0x54>)
  80004f4:	f001 f9d4 	bl	80018a0 <HAL_TIM_PWM_Start>
-  TIM4->CCR2=(int) IN_COUNTER * (1 - ORANGE_DUTY / 100.0);
-  TIM4->CCR3=(int) IN_COUNTER * (1 - RED_DUTY / 100.0);
-  TIM4->CCR4=(int) IN_COUNTER * (1 - BLUE_DUTY / 100.0);
-  */
 
   TIM4->CCR1=(int) IN_COUNTER / (100.0 / GREEN_DUTY);
  80004f8:	4b08      	ldr	r3, [pc, #32]	; (800051c <main+0x58>)
